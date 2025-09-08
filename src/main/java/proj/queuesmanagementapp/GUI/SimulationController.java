@@ -11,4 +11,7 @@ public class SimulationController {
     protected void onHelloButtonClick() {
         welcomeText.setText("Welcome to JavaFX Application!");
     }
+
+    public void appendToTextArea(String string) {
+    }
 }

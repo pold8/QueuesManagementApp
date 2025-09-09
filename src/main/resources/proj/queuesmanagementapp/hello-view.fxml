@@ -1,16 +1,79 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.geometry.Insets?>
-<?import javafx.scene.control.Label?>
-<?import javafx.scene.layout.VBox?>
-
 <?import javafx.scene.control.Button?>
-<VBox alignment="CENTER" spacing="20.0" xmlns:fx="http://javafx.com/fxml"
-      fx:controller="proj.queuesmanagementapp.GUI.SimulationController">
-    <padding>
-        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0"/>
-    </padding>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
 
-    <Label fx:id="welcomeText"/>
-    <Button text="Hello!" onAction="#onHelloButtonClick"/>
-</VBox>
+<AnchorPane xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/23.0.1"
+            fx:controller="proj.queuesmanagementapp.GUI.SimulationController"
+            prefWidth="1200.0" prefHeight="700.0">
+    <children>
+        <Label layoutX="80.0" layoutY="30.0" text="Input Data">
+            <font>
+                <Font size="24.0" />
+            </font>
+        </Label>
+        <Label layoutX="50.0" layoutY="120.0" text="Number of clients:">
+            <font>
+                <Font size="14.0" />
+            </font>
+        </Label>
+        <TextField fx:id="clients_textField" layoutX="200.0" layoutY="118.0" />
+        <Label layoutX="50.0" layoutY="160.0" text="Number of queues:">
+            <font>
+                <Font size="14.0" />
+            </font>
+        </Label>
+        <TextField fx:id="queues_textField" layoutX="200.0" layoutY="158.0" />
+        <Label layoutX="50.0" layoutY="200.0" text="Simulation time:">
+            <font>
+                <Font size="14.0" />
+            </font>
+        </Label>
+        <TextField fx:id="time_textField" layoutX="200.0" layoutY="198.0" />
+        <Label layoutX="50.0" layoutY="240.0" text="Minimum arrival time:">
+            <font>
+                <Font size="14.0" />
+            </font>
+        </Label>
+        <TextField fx:id="minArrival_textField" layoutX="200.0" layoutY="238.0" />
+        <Label layoutX="50.0" layoutY="280.0" text="Maximum arrival time:">
+            <font>
+                <Font size="14.0" />
+            </font>
+        </Label>
+        <TextField fx:id="maxArrival_textField" layoutX="200.0" layoutY="278.0" />
+        <Label layoutX="50.0" layoutY="320.0" text="Minimum service time:">
+            <font>
+                <Font size="14.0" />
+            </font>
+        </Label>
+        <Label layoutX="50.0" layoutY="360.0" text="Maximum service time:">
+            <font>
+                <Font size="14.0" />
+            </font>
+        </Label>
+        <TextField fx:id="minService_textField" layoutX="200.0" layoutY="318.0" />
+        <TextField fx:id="maxService_textField" layoutX="200.0" layoutY="358.0" />
+        <Button fx:id="changeStrategy_button" layoutX="50.0" layoutY="450.0" mnemonicParsing="false" onAction="#changeStrategyAction" text="Change Strategy" />
+        <Label layoutX="50.0" layoutY="420.0" text="Current strategy:">
+            <font>
+                <Font size="14.0" />
+            </font>
+        </Label>
+        <Label fx:id="strategy_label" layoutX="170.0" layoutY="420.0">
+            <font>
+                <Font size="14.0" />
+            </font>
+        </Label>
+        <TextArea fx:id="output_textArea" editable="false" layoutX="500.0" layoutY="120.0" prefHeight="500.0" prefWidth="600.0" />
+        <Button fx:id="start_button" layoutX="150.0" layoutY="550.0" mnemonicParsing="false" onAction="#startAction" text="Start Simulation">
+            <font>
+                <Font size="18.0" />
+            </font>
+        </Button>
+    </children>
+</AnchorPane>
